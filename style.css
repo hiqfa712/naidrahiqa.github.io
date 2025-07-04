@@ -24,7 +24,7 @@
   flex-direction: column;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("resource/WhatsApp\ Image\ 2025-07-03\ at\ 09.44.50.jpeg");
+    url("resource/background-image.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -68,42 +68,49 @@
 .main-content {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 1rem;
 }
 
-.profile-section {
-  margin-bottom: 2rem;
-}
-
-.icon {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 1.5rem;
-}
-
-.icon img {
+.profile-container {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.content {
+.profile-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-content {
   text-align: center;
+}
+
+.profile-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
   font-family: 'Franklin Gothic Medium', sans-serif;
 }
 
-.content h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-
-.desk {
-  text-align: center;
+.profile-details {
   font-family: Cambria;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
   line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .highlight-tkj {
@@ -116,9 +123,14 @@
   font-weight: bold;
 }
 
+.profile-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 .ask {
-  text-align: center;
-  margin: 1.5rem 0;
   font-family: 'Segoe UI', sans-serif;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
@@ -126,12 +138,6 @@
 .highlight-me {
   color: var(--secondary-color);
   font-weight: 500;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
 }
 
 .btn {
@@ -152,46 +158,36 @@
 
 /* === MEDIA QUERIES === */
 @media (min-width: 768px) {
-  .bg {
-    padding: 2rem;
-  }
-  
-  .navbar {
-    padding: 1rem 2rem;
-  }
-  
-  .profile-section {
-    display: flex;
-    align-items: center;
+  .profile-container {
+    flex-direction: row;
+    align-items: flex-start;
     gap: 3rem;
-    margin-bottom: 3rem;
   }
   
-  .icon {
+  .profile-image {
     margin: 0;
-    width: 200px;
-    height: 200px;
-    order: -1;
+    max-width: 350px;
+    position: sticky;
+    top: 2rem;
   }
   
-  .content, .desk {
+  .profile-content {
     text-align: left;
+    flex: 1;
+    padding-top: 1rem;
   }
   
-  .ask {
-    text-align: left;
-    padding-left: 2rem;
-  }
-  
-  .container {
-    justify-content: flex-start;
-    padding-left: 2rem;
+  .profile-action {
+    align-items: flex-start;
   }
 }
 
 @media (min-width: 1200px) {
-  .main-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  .profile-container {
+    gap: 4rem;
+  }
+  
+  .profile-image {
+    max-width: 400px;
   }
 }
