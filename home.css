@@ -1,0 +1,111 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;                   /* Reset margin default browser */
+  padding: 0;                  /* Reset padding default browser */
+  box-sizing: border-box;      /* Padding dan border tidak nambah width/height */
+}
+
+/* === BACKGROUND UTAMA === */
+.bg {
+  width: 100vw;                /* Lebar penuh viewport */
+  height: 100vh;               /* Tinggi penuh viewport */
+  overflow: hidden;            /* Hindari scroll tidak perlu */
+  display: flex;               /* Aktifkan flexbox */
+  flex-direction: column;      /* Susun child secara vertikal */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url("resource/WhatsApp\ Image\ 2025-07-03\ at\ 09.44.50.jpeg");
+  background-size: cover;      /* Gambar penuh area tanpa distorsi */
+  background-repeat: no-repeat;
+  background-position: center; /* Posisi gambar di tengah */
+  background-attachment: fixed; /* Efek parallax (tetap saat scroll) */
+}
+
+/* === NAVBAR === */
+.navbar {
+  width: calc(100% - 10rem);   /* Lebar 100% dikurangi 10rem di kiri/kanan */
+  max-width: 40rem;            /* Maksimum lebar 40rem (responsive) */
+  margin: 2rem 4rem;           /* Jarak luar: 2rem atas/bawah, 4rem kiri/kanan */
+  padding: 10px 20px 15px;     /* Jarak dalam: atas 10px, kanan/kiri 20px, bawah 15px */
+  display: flex;
+  justify-content: space-between; /* Sejajarkan child ke kiri dan kanan */
+  align-items: center;         /* Tengahkan vertikal */
+  font-family: 'Segoe UI', sans-serif;
+  background-color: rgb(37, 36, 37);
+  color: white;
+  border-radius: 25px;         /* Sudut melengkung */
+}
+
+/* === ICON (Contoh: Tombol/Menu) === */
+.icon {
+  position: fixed;             /* Posisi tetap relatif terhadap viewport */
+  right: 15%;                  /* 15% dari kanan layar */
+  top: 12%;                    /* 12% dari atas layar */
+  width: 50vb;                 /* Lebar 50% viewport width (satuan vb) */
+  height: auto;                /* Tinggi menyesuaikan konten */
+  display: flex;
+  flex-direction: row;         /* Child disusun horizontal */
+}
+
+/* === NAVIGATION LINKS === */
+.nav-links {
+  display: flex;
+  gap: 20px;                   /* Jarak antar item 20px */
+  list-style: none;            /* Hilangkan bullet point */
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;       /* Hilangkan underline */
+  transition: color 0.3s;      /* Animasi perubahan warna */
+}
+
+.nav-links a:hover {
+  color: rgb(187, 122, 201);   /* Warna saat hover */
+}
+
+/* === KONTEN UTAMA === */
+.content {
+  padding: 3.5rem 0.1rem 0.1rem 5rem; /* Atas 3.5rem, kanan 0.1rem, bawah 0.1rem, kiri 5rem */
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  font-size: 1.9rem;           /* Ukuran font */
+}
+
+.desk {
+  padding-left: 5rem;
+  font-family: Cambria;
+  font-size: 1.5rem;
+}
+
+/* === TEKS "ASK" === */
+.ask {
+  padding: 7rem 0 0 5rem;      /* Atas 7rem, kiri 5rem, lainnya 0 */
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;            /* Ketebalan font (medium) */
+}
+
+/* === CONTAINER TOMBOL === */
+.container {
+  display: flex;
+  align-items: first baseline;  /* Sejajarkan item ke baseline pertama */
+  padding: 1rem 0 0 5rem;      /* Atas 1rem, kiri 5rem */
+}
+
+/* === TOMBOL (BUTTON) === */
+.btn {
+  padding: 13px 23px;
+  font-size: 1.3rem;
+  color: white;
+  background-color: rgb(255, 39, 237);
+  border: none;
+  border-radius: 8px;          /* Sudut melengkung */
+  cursor: pointer;             /* Ubah kursor jadi tangan saat hover */
+  transition: background-color 0.3s, transform 0.2s; /* Animasi */
+}
+
+.btn:hover {
+  background-color: rgb(158, 23, 147); /* Warna saat hover */
+  transform: scale(1.05);      /* Sedikit membesar saat hover */
+}
