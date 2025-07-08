@@ -8,12 +8,12 @@
 /* === VARIABLES === */
 :root {
   --primary-color: rgb(255, 39, 237);
-  --primary-hover: rgb(158, 23, 147);
+  --primary-hover: rgb(164, 51, 187);
   --secondary-color: rgb(187, 122, 201);
   --text-color: white;
   --tkj-color: rgb(163, 142, 163);
-  --school-color: rgb(50, 253, 111);
-  --bg-dark: rgb(37, 36, 37);
+  --school-color: rgb(99, 250, 144);
+  --bg-dark: rgb(44, 42, 44);
 }
 
 /* === BACKGROUND === */
@@ -85,9 +85,9 @@
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
 }
 
 .profile-image img {
@@ -103,7 +103,7 @@
 .profile-content h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 1rem;
-  font-family: 'Franklin Gothic Medium', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .profile-details {
